@@ -6,7 +6,7 @@ Wildcard HTTPS certificates, basics such as securing the server, and networking 
 
 Base OS: Ubuntu 20.4.2
 
-Additional domain name configuration: Ensure the (sub-)domain has a CAA Record.
+Additional required domain name configuration: Ensure the (sub-)domain has a CAA Record.
 
 
 1) Install nginx, ssl-cert, rsync
