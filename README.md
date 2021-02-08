@@ -152,7 +152,7 @@ sudo systemctl restart nginx
 Create for rsync password file:
 ```
 echo replace.with.credentials > ~/obscurity_pass
-sudo chmod 755 ~/obscurity_pass
+sudo chmod 700 ~/obscurity_pass
 ```
 
 ```
