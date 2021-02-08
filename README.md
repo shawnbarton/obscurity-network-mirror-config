@@ -1,6 +1,6 @@
 # Basic Mirror Configuration
 
-This document serves as a guide to configure a basic nginx HTTP(S) file mirror, for example, as used at https://obscurity.network/.
+This document serves as a guide to configure a basic nginx HTTPS file mirror, for example, as used at https://obscurity.network/.
 
 Wildcard HTTPS certificates, basics such as securing the server, and networking are out of scope.
 
