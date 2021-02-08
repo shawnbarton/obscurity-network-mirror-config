@@ -47,14 +47,6 @@ To:
 ```
 
 ```
-Change:
-        sendfile on;
-To:
-        sendfile on;
-        sendfile_max_chunk 512k;
-```
-
-```
 Replace SSL Settings section:
         ##
         # SSL Settings
