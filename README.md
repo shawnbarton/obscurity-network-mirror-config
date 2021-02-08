@@ -1,11 +1,13 @@
 # Basic Mirror Configuration
 
-This document serves as a guide to configure a basic nginx HTTP(S) file mirror, for example, https://obscurity.network/). 
+This document serves as a guide to configure a basic nginx HTTP(S) file mirror, for example, https://obscurity.network/).
+
 Wildcard HTTPS certificates, basics such as securing the server, and networking are out of scope.
 
 Base OS: Ubuntu 20.4.2
 
 Additional domain name configuration: Ensure the (sub-)domain has a CAA Record.
+
 
 1) Install nginx, ssl-cert, rsync
 
