@@ -1,7 +1,7 @@
 # Basic Mirror Configuration
 
 This document serves as a guide to configure a basic nginx HTTP(S) file mirror, for example, https://obscurity.network/). 
-Basics such as securing the server and networking are out of scope.
+Wildcard HTTPS certificates, basics such as securing the server, and networking are out of scope.
 
 Base OS: Ubuntu 20.4.2
 
