@@ -192,7 +192,7 @@ sudo vi ~/rsync_cronjob.sh
 ```bash
 #!/bin/bash
 
-/usr/bin/rsync --chown=www-data:www-data --stats -vcaP rsync://user@master:port/obscurity /srv/mirrors/obscurity.network/obscurity/ --password-file /home/username/obscurity_pass;
+/usr/bin/rsync --chown=www-data:www-data --stats -vcaP rsync://user.name@server.ip:port/obscurity /srv/mirrors/obscurity.network/obscurity/ --password-file /home/username/obscurity_pass;
 
 if [ $? -eq 0 ]
 then
