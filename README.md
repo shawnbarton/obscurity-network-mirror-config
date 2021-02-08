@@ -135,7 +135,7 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-Have certbot request certificates (you will have to enter the (sub-)domain):
+Configure certbot and request certificates (you will have to enter the (sub-)domain):
 ```
 sudo certbot --nginx
 ```
@@ -147,7 +147,7 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-Create password file:
+Create for rsync password file:
 ```
 echo replace.with.credentials > ~/obscurity_pass
 sudo chmod 755 ~/obscurity_pass
