@@ -33,7 +33,45 @@ sudo chown -R www-data: /srv/www-data/
 sudo chown -R www-data: /srv/mirrors/
 ```
 
-3) Configure nginx sites:
+4) Configure nginx:
+```
+sudo vi /etc/nginx/nginx.conf
+```
+
+```
+Change:
+        sendfile on;
+To:
+        sendfile on;
+        sendfile_max_chunk 512k;
+```
+
+```
+Change:
+        sendfile on;
+To:
+        sendfile on;
+        sendfile_max_chunk 512k;
+```
+
+```
+Replace SSL Settings section:
+        ##
+        # SSL Settings
+        ##
+
+        ssl_protocols TLSv1.2 TLSv1.3; # Only modern TLS
+        ssl_prefer_server_ciphers on;
+        ssl_stapling on;
+        ssl_stapling_verify on;
+        ssl_session_cache shared:SSL:60m;
+        ssl_session_timeout 1d;
+        ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+```
+
+
+5) Configure nginx sites:
 
 ```
 sudo vi /etc/nginx/sites-available/generics_unavailable
