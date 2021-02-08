@@ -167,24 +167,25 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-Configure certbot and request certificates (you will have to enter the (sub-)domain):
+6) Configure certbot and request certificates (you will have to enter the (sub-)domain):
 ```
 sudo certbot --nginx
 ```
 
-Enable the mirror nginx configuration:
+7) Enable the mirror nginx configuration:
 ```
 sudo ln sudo vi /etc/nginx/sites-available/mirror_obscurity-network /etc/nginx/sites-enabled/mirror_obscurity-network
 sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-Create for rsync password file:
+8) Create for rsync password file:
 ```
 echo replace.with.credentials > ~/obscurity_pass
 sudo chmod 700 ~/obscurity_pass
 ```
 
+9) Create cron job bash script:
 ```
 sudo vi ~/rsync_cronjob.sh
 ```
@@ -200,10 +201,11 @@ else
         echo "$(date) - obscurity.network SYNC ERROR" >> /srv/www-root/mirror_sync_log.txt
 fi
 ```
-
 ```
 chmod +x ~/rsync_cronjob.sh
 ```
+
+10) Add script to cron:
 ```
 sudo crontab -e
 ```
